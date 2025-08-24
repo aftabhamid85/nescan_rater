@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Completed</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <img src="{{ url_for('static', filename='nescan_logo.png') }}" alt="NESCAN Hub" class="logo">
+        <div>
+          <h2>All organisations processed</h2>
+          <div class="help">Rater: {{ rater }}</div>
+        </div>
+      </div>
+
+      <p>Your results file is ready.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ url_for('download') }}">Download Excel</a>
+        <a class="btn btn-secondary" href="{{ url_for('index') }}">Start Over</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

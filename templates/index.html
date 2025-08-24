@@ -1,1 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NESCAN Stakeholder Rater</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <img src="{{ url_for('static', filename='nescan_logo.png') }}" alt="NESCAN Hub" class="logo">
+        <div>
+          <h1>NESCAN Hub — Stakeholder Rating</h1>
+          <div class="help">Enter your name to begin. You’ll rate each organisation sequentially.</div>
+        </div>
+      </div>
 
+      <form method="post">
+        <label for="rater_name">Your Name</label>
+        <input type="text" id="rater_name" name="rater_name" required placeholder="Type your name">
+
+        <div style="height:12px"></div>
+        <button type="submit" class="btn btn-primary">Start</button>
+      </form>
+    </div>
+
+    <div class="help">Powered by Flask • Excel in/out • Custom Likert scales</div>
+  </div>
+</body>
+</html>
